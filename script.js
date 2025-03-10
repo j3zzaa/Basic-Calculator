@@ -63,6 +63,13 @@ function calculateSquareRoot() {
     }
 }
 
+function clearDisplay() {
+    currentInput = '';
+    currentOperation = '';
+    previousInput = '';
+    document.getElementById('display').value = '';
+}
+
 document.getElementById('sqrt').addEventListener('click', appendSquareRoot);
     
 
