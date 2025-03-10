@@ -27,7 +27,36 @@ function appendOperation(operation) {
 
 //fixes the "issue". note: addition still doesnt work yet, only shows the "+" symbol. 
 
-//note to self: sqrt doesnt work. 
+function calculate() {
+    let result;
+    const prev = parseFloat(previousInput)
+    const current = parseFloat(currentInput)
+
+    if (isNaN(prev) || isNaN(current)) return;
+
+    switch (currentOperation) {
+        case '+':
+            result = prev + current;
+            break;
+        case '-':
+            result = prev - current;
+            break;
+        case '/':
+            result = prev / current;
+            break;
+        default;
+            return
+    }
+
+    currentInput = result;
+    currentOperation = '';
+    previousInput = '';
+    document.getElementById('display').value = result;
+
+}
+
+document.getElementById('sqrt').addEventListener('click', appendSquareRoot);
+    
 
 
 
