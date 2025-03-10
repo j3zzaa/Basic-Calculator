@@ -55,6 +55,14 @@ function calculate() {
 
 }
 
+function calculateSquareRoot() {
+    let display = document.getElementById('display');
+    let currentValue = parseFloat(display.value);
+    if (!isNaN(currentValue)) {
+        display.value = Math.sqrt(currentValue);
+    }
+}
+
 document.getElementById('sqrt').addEventListener('click', appendSquareRoot);
     
 
