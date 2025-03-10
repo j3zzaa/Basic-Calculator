@@ -44,7 +44,7 @@ function calculate() {
         case '/':
             result = prev / current;
             break;
-        default;
+        default:
             return
     }
 
